@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header_image{
+    background-image:  url("../img/home.svg");
+  
+    background-color: rgb(248, 248, 248);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 80vh;
+
+  }
+
+  .header_text {
+    position: absolute;
+    top: 35%;
+    right: lef;
+    left: 25%;
+}
+
+.my_container{
+    width: 80vw;
+    margin: auto;
+    background-color: rgba(245, 245, 245, 0.904);
+    display: flex;
+}
+
+.part1{
+    width: 50%;
+
+}
+
+.part2{
+    width: 50%;
+    background-color: re;
+}
