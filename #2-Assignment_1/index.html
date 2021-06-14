@@ -15,24 +15,86 @@
   </head>
   <body>
     <div class="container">
+      <!-- HEADER IMAGE ADDED BY CSS -->
       <div class="header_image"></div>
+
+      <!-- SIMPLE NAVBAR -->
+      <nav class="my_nav">
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#useful-links">Useful Links</a>
+      </nav>
+
       <div class="header_text">
-        <h1 class="display-4 text-center mb-5">Md Rakibul Islam</h1>
-        <p class="lead">
-          Studies in
-          <a href="https://daffodilvarsity.edu.bd/"
-            >Daffofil International University</a
-          >
-        </p>
-        <p class="lead">From Joypurhat,Rajshahi</p>
+        <h3>Hello,I am Md Rakibul Islam</h3>
+        <p class="mt-3">Welcome to my website</p>
       </div>
 
-      
-      <div class="my_container">
-        <div class="part1">
-          <div class="jumbotron mt-5">
-            <h1 class="display-5">Skills</h1>
-            <ul>
+      <!-- ABOUT SECTION -->
+      <section id="about">
+        <div class="jumbotron background mt-5">
+          <h1 class="display-4 text-center mb-5">About Me</h1>
+          <h3 class="text-center mb-5">Md Rakibul Islam</h3>
+          <p class="lead">
+            Studies in
+            <a href="https://daffodilvarsity.edu.bd/"
+              >Daffofil International University</a
+            >
+          </p>
+          <p class="lead">From Joypurhat,Rajshahi</p>
+
+          <h1 class="display-5">Result :</h1>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Group/Subject</th>
+              <th>Year</th>
+              <th>Result</th>
+            </tr>
+
+            <tr>
+              <td>BSC</td>
+              <td>Computer Science And Engieneering</td>
+              <td>2021</td>
+              <td>N/A</td>
+            </tr>
+
+            <tr>
+              <td>HSC</td>
+              <td>Science</td>
+              <td>2017</td>
+              <td>4.58</td>
+            </tr>
+
+            <tr>
+              <td>SSC</td>
+              <td>Science</td>
+              <td>2015</td>
+              <td>5.00</td>
+            </tr>
+          </table>
+          <hr class="my-4" />
+
+          <h1 class="display-5">Hobbies :</h1>
+          <ul>
+            <li>Games</li>
+            <li>Movies</li>
+            <li>Programming</li>
+          </ul>
+          <hr class="my-4" />
+
+          <p>“Either you run the day or the day runs you”</p>
+          <p>— <strong>Jim Rohn</strong></p>
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section id="skills">
+        <div class="jumbotron background mt-5">
+          <h1 class="display-5 text-center mb-5">Skills</h1>
+          <div class="skill_container">
+            <ul class="skill_container_ul">
               <li>Python</li>
               <li>Javascrpt</li>
               <li>C</li>
@@ -42,73 +104,116 @@
               <li>CSS3</li>
               <li>Bootstrap</li>
             </ul>
-            <hr class="my-4" />
 
-            <h1 class="display-5">Hobbies</h1>
-            <ul>
-              <li>Games</li>
-              <li>Movies</li>
-              <li>Programming</li>
-            </ul>
-            <hr class="my-4" />
-
-            <p>“Either you run the day or the day runs you”</p>
-            <p>— <strong>Jim Rohn</strong></p>
-
-            <h1 class="display-5">Best Universities:</h1>
-            <ul>
-              <li>
-                <a href="https://www.mit.edu/"
-                  >Massachusetts Institute of Technology</a
-                >
-              </li>
-
-              <li>
-                <a href="https://www.liverpool.ac.uk/"
-                  >university of liverpool</a
-                >
-              </li>
-
-              <li>
-                <a href="https://www.stanford.edu/">Stanford University</a>
-              </li>
-
-              <li>
-                <a href="https://www.ox.ac.uk/">University of Oxford</a>
-              </li>
-
-              <li>
-                <a href="https://www.harvard.edu/">Harvard University</a>
-              </li>
-            </ul>
+            <div class="skill_container_image mt-5">
+              <img src="img/skills/python.jfif" alt="" />
+              <img src="img/skills/js.png" alt="" />
+              <img src="img/skills/C.png" alt="" />
+              <img src="img/skills/django.png" alt="" />
+              <img src="https://reactjs.org/logo-og.png" alt="" />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+                alt=""
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                alt=""
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="part2">
-          <div class="jumbotron mt-5">
-            <h1>Rakib</h1>
-            <h1>Rakib</h1>
-            <h1>Rakib</h1>
-            <h1>Rakib</h1>
+      <!-- PROJECT SECTION -->
+      <section id="projects">
+        <div class="jumbotron background mt-5">
+          <h1 class="display-5 text-center mb-5">Projects</h1>
+          <p class="my-5">Some of the projects i have done :</p>
+          <div class="project_item">
+            <h3>Backend For A Flutter App</h3>
+            <p>
+              Implemented the rest api for a flutter application.Where user can
+              login,reset password,create appointments e.t.c
+            </p>
+            <p>Technology Used : Python,Django rest framework</p>
+          </div>
+
+          <div class="project_item">
+            <h3>ShopOnline</h3>
+            <p>A fully functional ecommerce website.</p>
+            <p>Technology Used : Django,python,javascript,Html,Css,Bootstrap</p>
+            <p></p>
+          </div>
+
+          <div class="project_item">
+            <h3>ShopBlog</h3>
+            <p>A Blog Website for ShopOnline.</p>
+            <p>Technology Used : Django,python,javascript,Html,Css,Bootstrap</p>
+            <p></p>
+          </div>
+
+          <div class="project_item">
+            <h3>Sentiment Analysis</h3>
+            <p>
+              Sentiment Analysis from Psychological Support Facebook Community
+              with 700 data.
+            </p>
+            <p>
+              Technology Used : Python,Nltk,Matplotlib,Regular Expression,Word
+              Cloud
+            </p>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- LINkS SECTION -->
+      <section id="useful-links">
+        <div class="jumbotron background mt-5">
+          <h1 class="display-5 text-center">Useful Links:</h1>
+          <ul>
+            <li>
+              <a href="https://www.mit.edu/"
+                >Massachusetts Institute of Technology</a
+              >
+            </li>
+
+            <li>
+              <a href="https://www.liverpool.ac.uk/">university of liverpool</a>
+            </li>
+
+            <li>
+              <a href="https://www.stanford.edu/">Stanford University</a>
+            </li>
+
+            <li>
+              <a href="https://www.ox.ac.uk/">University of Oxford</a>
+            </li>
+
+            <li>
+              <a href="https://www.harvard.edu/">Harvard University</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- LAST MODIFIED SECTION -->
+      <section>
+        <div class="jumbotron background mt-5">
+          <h2>
+            Last modified :
+            <span style="font-size: 24px" id="modified"></span>
+          </h2>
+        </div>
+      </section>
     </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+    <!-- SHOWS THE LAST MODIFIED DATE -->
+    <script>
+      document.getElementById("modified").innerText = document.lastModified;
+    </script>
   </body>
 </html>
