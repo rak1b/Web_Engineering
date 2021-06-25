@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(3, 27, 48);
+}
+.container{
+        margin-top: 10vh;
+        width: 50vw;
+        height: auto;
+        min-height: 50vh;
+        background-color: rgb(255, 255, 255);
+        padding: 60px;
+}
+
+h2{
+    font-weight: bold;
+}

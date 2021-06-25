@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT PRACTICE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Basic Javascript</h2>
+      <p id="show_date">Date and Time Will Appear Here</p>
+      <button onclick="change_date()">
+        Click Here To Display Date And Time
+      </button>
+
+      <br />
+      <br />
+      <hr />
+
+      <p id="show_func">This Will Call A Function</p>
+      <button onclick="change_text()">Call Function</button>
+
+      <br />
+      <hr />
+      <p>Add Two Number:</p>
+      <label for="Num1">Number 1 : </label>
+      <input id="Num1" name="Num1" type="text" />
+      <br />
+      <label for="Num2">Number 2 : </label>
+      <input id="Num2" type="text" />
+      <br />
+      <label for="Sum">Result : </label>
+      <input id="Sum" value="" type="text" />
+      <br />
+      <button id="result" onclick="sum()">Calculate Result</button>
+      <br />
+      <hr />
+      <h2>Js Array Demo :</h2>
+      <p id="array"></p>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
