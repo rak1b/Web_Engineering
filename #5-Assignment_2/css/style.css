@@ -4,17 +4,26 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    --red:#ff6b59;
+    --red:#E34234;
+	--back:#050533;
+	--nav:#F2F1E8;
+	--text:#0D698B;
 }
 
 body{
-    background-color: #1A1A1D;
+    background-color: var(--back);
 }
 
 .my_nav {
 	display: flex;
 	justify-content: center;
-	padding: 43px;
+	padding: 20px 0;
+	background: var(--nav);
+	height: 100px;
+	margin-bottom: 100px;
+    font-family: 'Poppins', sans-serif;
+	
+
 }
 
 .my_nav a {
@@ -22,7 +31,7 @@ body{
 	margin: 10px 20px;
 	font-size: 30px;
 	font-weight: bold;
-	color: white;
+	color: var(--text);
 	cursor: pointer;
 }
 
@@ -45,16 +54,22 @@ body{
 	padding: 20px;
 	border-radius: 15px;
 	max-width: 80vw;
+	background: var(--nav);
 }
-
 .currency_text{
 	text-align: center;
-	color: rgb(216, 216, 216);
+	color: var(--red);
 	margin: 20px 0;
 }
-
-.currency_inputs{
-	width: 60vw;
+.currency_container {
+	width: 50vw;
+	margin: auto;
+	background: var(--nav);
+	border-radius: 34px;
+	padding: 30px;
+}
+.currency_inputs {
+	width: 55%;
 	margin: auto;
 	display: flex;
 	justify-content: center;
@@ -75,6 +90,20 @@ body{
 .currency_input input {
 	height: 40px;
 	margin: 10px 5px;
+	border-radius: 12px;
+	background: var(--back);
+	color: var(--nav);
+
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: 0 0 10px #7195ce;
+}
+
+::placeholder{
+	color: var(--nav);
+	margin-left: 20px;
 }
 
 .currency_input{
@@ -85,10 +114,12 @@ body{
 
 /* ______For Quiz_____ */
 
-.question_container{
-	background: #333;
+.question_container {
+	background: var(--nav);
 	width: 60vw;
 	margin: auto;
+	padding: 30px;
+	border-radius: 34px;
 }
 .question_container h1{
 	color: #ff6b59;
@@ -97,13 +128,41 @@ body{
 .answers_container{
 	display: flex;
 	flex-direction: column;
+	margin-top: 10px;
 
 }
 .answers_container label span{
-	color: aliceblue;
+	color: var(--text);
+
+}
+.answers_container label{
+	margin: 20px 10px;
 
 }
 
 #result{
 	color: white;
+}
+
+button{
+		width: 100px;
+		margin: 20px 10px;
+		padding: 4px;
+		font-size: 17px;
+		color: var(--red);
+		font-weight: bold;
+}
+
+#result {
+	margin: 10px 10px;
+	font-size: 15px;
+	
+}
+
+.wrong{
+	color: #ff1919!important;
+}
+
+.correct{
+	color:green!important;
 }
