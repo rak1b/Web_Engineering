@@ -67,12 +67,13 @@ function currency_converter() {
   var usd = parseFloat(bdt) * 0.012;
   var eur = parseFloat(bdt) * 0.0099;
 
-  if (bdt.length==0) {
-    document.getElementById("usd").value = '0';
-    document.getElementById("eur").value = '0';
-  }else{
+  if (bdt.length == 0) {
+    document.getElementById("usd").value = "0";
+    document.getElementById("eur").value = "0";
+  } else {
     document.getElementById("eur").value = eur.toFixed(2);
     document.getElementById("usd").value = usd.toFixed(2);
   }
-
 }
+
+

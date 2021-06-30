@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortune Generator</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/scripts.js"></script>
-</head>
-<body onload="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body onload="">
     <nav class="my_nav">
-        <a href="index.html">Home</a>
-        <a href="convert.html">Currency Converter</a>
-        <a href="quiz.html">Quiz</a>
+      <a href="index.html">Home</a>
+      <a href="convert.html">Currency Converter</a>
+      <a href="quiz.html">Quiz</a>
     </nav>
 
-    <div  class="quiz_container">
+    <div class="question_container">
+      <h1 id="question">Custom Radio Buttons</h1>
+      <div class="answers_container">
+        <label class="answer">
+          <input type="radio"name="radio" class="radiobtn" id="a" />
+          <span class="checkmark"></span>
+          <span id="ans1">ans1 there</span>
+        </label>
 
+        <label class="answer">
+          <input type="radio"  name="radio" class="radiobtn" id='b' />
+          <span class="checkmark"></span>
+          <span id="ans2">ans2 there</span>
+        </label>
+
+        <label class="answer">
+          <input type="radio" name="radio" class="radiobtn" id="c"/>
+          <span class="checkmark"></span>
+          <span id="ans3">ans3 there</span>
+        </label>
+        <label class="answer">
+          <input type="radio" name="radio"  class="radiobtn" id="d"/>
+          <span class="checkmark"></span>
+          <span id="ans4">ans4 there</span>
+        </label>
+        <h2 id="result"></h2>
+        <button onclick="nextButtonfunction()" id="nextButton">Next</button>
+      </div>
     </div>
-</body>
+
+    <script src="js/quiz2.js"></script>
+  </body>
 </html>
