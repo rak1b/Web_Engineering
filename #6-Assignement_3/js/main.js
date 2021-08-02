@@ -11,15 +11,9 @@ const submit_func = () => {
 //     console.log(short_slot_value[0]);
 //   };
 
-function slotFun(){
-    console.log('clicked')
-    var time_slot = document.getElementById("time_slot");
-    var selected_slot = time_slot.options[time_slot.selectedIndex].value;
-    const temp_slot = selected_slot.split(" ")[0];
-    document.getElementById("slot").value=temp_slot;
 
 
-}
+
 
 
   function fun() {
