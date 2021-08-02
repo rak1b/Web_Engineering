@@ -4,7 +4,7 @@ require 'conn.php';
 
 $id = $_GET['id'];
 
-$sql = "DELETE FROM `data` WHERE sid = '$id';";
+$sql = "DELETE FROM `data` gitWHERE sid = '$id';";
 $result = mysqli_query($con, $sql);
 // $row = mysqli_fetch_array($result);
 // echo $row['sid'];
