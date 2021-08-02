@@ -2,6 +2,38 @@
 require 'conn.php';
 
 
+$id = $_GET['id'];
+
+$sql = "select * from `data` WHERE sid = '$id';";
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_array($result);
+// echo $row['sid'];
+
+
+if (isset($_POST['fname'])) {
+
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $email = $_POST['email'];
+    $sid = $_POST['sid'];
+    $slot = $_POST['slot'];
+
+    $sql_up = "UPDATE `data` SET `sid`='$sid',`fname`='$fname',`lname`='$lname',`email`='$email',`slot`='$slot' WHERE sid=$id";
+    // $sql = "INSERT INTO `student`.`data`(`sid`,`fname`,`lname`, `email`, `slot`) VALUES ('$sid','$fname','$lname','$email','$slot')";
+    $res=mysqli_query($con,$sql_up); 
+    if($res){
+        echo "<script> alert('Update successfull'); </script>";
+
+        // $DOMAIN = $_SERVER['SERVER_NAME'];
+        // $URL = str_replace("signup","index",$_SERVER['REQUEST_URI']);
+
+        echo "<script> location.href='admin.php'; </script>";
+      
+
+    }
+
+
+}
 function slot_remaining($name, $con)
 {
     $sql =     "select count(distinct sid) from `data` WHERE slot = '$name';";
@@ -24,15 +56,6 @@ function slot_remaining($name, $con)
     echo 8 - $num;
 }
 
-// $sql="SELECT * FROM `data` ";
-// $result=$con->query($sql); 
-
-// while ($row = mysqli_fetch_array($result)) {
-//     // echo $row['sid']; // Print a single column data
-//     $num =  $row['count(distinct sid)']; // Print a single column data
-//     // echo print_r($row);       // Print the entire row data
-// }
-
 
 
 ?>
@@ -45,7 +68,7 @@ function slot_remaining($name, $con)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
+    <title>Update</title>
     <?php include('links.php'); ?>
 
 </head>
@@ -57,31 +80,29 @@ function slot_remaining($name, $con)
                 <div class="col-12 col-md-8 col-lg-8 col-xl-6">
                     <div class="row">
                         <div class="col text-center mb-3">
-                            <h2>SignUp Here</h2>
-                            <p>OR</p>
-                            <a href="admin.php">Go to Admin Section</a>
+                            <h2>Update your info here</h2>
                         </div>
                     </div>
-                    <form class='form_bg' action="signup.php" method="post">
+                    <form class='form_bg' action="" method="post">
 
                         <div class="row align-items-center mt-4">
                             <div class="col">
-                                <input type="text" id='fname' name='fname' class="form-control" placeholder="First Name">
+                                <input type="text" id='fname' name='fname' value="<?php echo $row['fname']?>" class="form-control" placeholder="First Name">
                             </div>
                             <div class="col">
-                                <input type="text" id='lname' name='lname' class="form-control" placeholder="Last Name">
-                            </div>
-                        </div>
-
-                        <div class="row align-items-center mt-4">
-                            <div class="col">
-                                <input type="text" id='sid' name='sid' class="form-control" placeholder="Sid">
+                                <input type="text" id='lname' name='lname' value="<?php echo $row['lname']?>" class="form-control" placeholder="Last Name">
                             </div>
                         </div>
 
                         <div class="row align-items-center mt-4">
                             <div class="col">
-                                <input type="email" id='email' name='email' class="form-control" placeholder="Email">
+                                <input type="text" id='sid' name='sid' value="<?php echo $row['sid']?>" class="form-control" placeholder="Sid">
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center mt-4">
+                            <div class="col">
+                                <input type="email" id='email' name='email' value="<?php echo $row['email']?>" class="form-control" placeholder="Email">
                             </div>
                         </div>
 
@@ -127,6 +148,7 @@ function slot_remaining($name, $con)
 
                             
                         </script>
+                       
                         <div class="form-group mt-3">
                             <label for="time_slot">Select the time slot from here</label>
                             <select multiple class="form-control" onclick=slotFun() id="time_slot">
@@ -164,5 +186,7 @@ function slot_remaining($name, $con)
 
 
 </body>
+
+
 
 </html>
