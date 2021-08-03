@@ -23,7 +23,9 @@ require 'conn.php';
 
 
 
-        <h2 class="text-center mt-5 mb-5">List of students</h2>
+        <h2 class="text-center mt-5 mb-2">List of students</h2>
+        <p class="text-center " ><a style="color: white;" href="index.php">Go to Signup Page</a></p>
+
 
         <table class="table table-bordered table-dark text-center">
             <thead>

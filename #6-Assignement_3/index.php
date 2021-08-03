@@ -9,7 +9,6 @@ function slot_remaining($name, $con)
 
 
     if ($result) {
-        // echo "Working";
     } else {
         echo "Not Working";
     }
@@ -24,14 +23,6 @@ function slot_remaining($name, $con)
     echo 8 - $num;
 }
 
-// $sql="SELECT * FROM `data` ";
-// $result=$con->query($sql); 
-
-// while ($row = mysqli_fetch_array($result)) {
-//     // echo $row['sid']; // Print a single column data
-//     $num =  $row['count(distinct sid)']; // Print a single column data
-//     // echo print_r($row);       // Print the entire row data
-// }
 
 
 
@@ -59,7 +50,7 @@ function slot_remaining($name, $con)
                         <div class="col text-center mb-3">
                             <h2>SignUp Here</h2>
                             <p>OR</p>
-                            <a href="admin.php">Go to Admin Section</a>
+                            <a href="admin.php">Go to Admin Page</a>
                         </div>
                     </div>
                     <form class='form_bg' action="signup.php" method="post">
@@ -134,12 +125,15 @@ function slot_remaining($name, $con)
                                 <option onclick="slot_check1()">Monday 10am-12am - <script>
                                         document.write(mon_slot)
                                     </script> seats available</option>
+
                                 <option onclick="slot_check2()" >Tuesday 10am-12am - <script>
                                         document.write(tuesday_slot)
                                     </script> seats available</option>
+
                                 <option onclick="slot_check3()">Thursday 10am-12am - <script>
                                         document.write(wednesday_slot)
                                     </script> seats available</option>
+                                    
                                 <option onclick="slot_check4()">Wednesday 10am-12am - <script>
                                         document.write(thursday_slot)
                                     </script> seats available</option>
